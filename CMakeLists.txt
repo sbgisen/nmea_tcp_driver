@@ -10,6 +10,7 @@ install(PROGRAMS
    scripts/nmea_tcp_driver
    scripts/nmea_topic_driver
    scripts/nmea_topic_tcp_reader
+   scripts/*.bash
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

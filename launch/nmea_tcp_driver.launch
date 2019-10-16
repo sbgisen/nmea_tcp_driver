@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node pkg="nmea_tcp_driver" type="nmea_tcp_driver" name="nmea_tcp_driver" >
+    <param name="host"	value="localhost" />
+    <param name="port"	value="52001" />
+  </node>
+</launch>
