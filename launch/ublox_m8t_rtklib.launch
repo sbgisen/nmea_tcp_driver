@@ -1,17 +1,19 @@
+<!-- Need to be debugged -->
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
   <arg name="base_name"         default="CQ" /> <!-- CQ for Tokyo, kaname for Tsukuba -->
   <arg name="rtklib_path"       default="/home/gisen/workspace/RTKLIB" />
-
+  <!--
   <node pkg="nmea_tcp_driver" type="nmea_tcp_driver" name="nmea_tcp_driver" >
     <param name="host"	value="localhost" />
     <param name="port"	value="52001" />
   </node>
+  -->
 
   <node pkg="nmea_tcp_driver" type="start_rtkrcv.bash" name="rtklib_rtkrcv" 
-    args="-b $(arg base_name) -p $(find nmea_tcp_driver) -r $(arg rtklib_path)"
-    output="screen"
+    args="-b $(arg base_name) -p $(find nmea_tcp_driver) -r $(arg rtklib_path)" 
+    output="log"
   />
 
 </launch>
